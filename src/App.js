@@ -7,12 +7,12 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
   }
 `
 const FlexContainer = styled.div`
   display: flex;
   justify-content: flex-start;
+  color: white;
 `
 
 const CorH1 = styled.h1`
@@ -30,7 +30,7 @@ function App() {
       type: "Electric",
       evolved: false,
       weight: 2,
-      color: 'yellow',
+      color: 'gold',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/b/b9/172Pichu.png/250px-172Pichu.png',
       id: 0
     },
@@ -38,7 +38,7 @@ function App() {
       type: "Electric",
       evolved: true,
       weight: 6,
-      color: 'yellow',
+      color: 'gold',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png',
       id: 0
     },
@@ -46,17 +46,17 @@ function App() {
       type: "Electric",
       evolved: true,
       weight: 30,
-      color: 'yellow',
+      color: 'gold',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/8/88/026Raichu.png/250px-026Raichu.png',
       id: 0
     }]
-    const bulbasalrs = [
+    const bulbasaurs = [
     {
-      name: "Bubasalro",
+      name: "Bulbasaur",
       type: "grama, tóxico",
       evolved: false,
       weight: 6.9,
-      color: 'turquoise',
+      color: 'green',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png',
       id: 0
     },
@@ -65,7 +65,7 @@ function App() {
       type: "grama, tóxico",
       evolved: true,
       weight: 13,
-      color: 'turquoise',
+      color: 'green',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png',
       id: 0
     },
@@ -74,7 +74,7 @@ function App() {
       type: "grama, tóxico",
       evolved: true,
       weight: 100,
-      color: 'turquoise',
+      color: 'green',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png',
       id: 0
     }]
@@ -112,7 +112,7 @@ function App() {
       type: "water",
       evolved: false,
       weight: 9,
-      color: 'blue',
+      color: 'turquoise',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png',
       id: 0
     },
@@ -121,7 +121,7 @@ function App() {
       type: "water",
       evolved: true,
       weight: 22.5,
-      color: 'blue',
+      color: 'turquoise',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/0/0c/008Wartortle.png/250px-008Wartortle.png',
       id: 0
     },
@@ -130,7 +130,7 @@ function App() {
       type: "water",
       evolved: true,
       weight: 85.5,
-      color: 'blue',
+      color: 'turquoise',
       image: 'https://archives.bulbagarden.net/media/upload/thumb/0/02/009Blastoise.png/250px-009Blastoise.png',
       id: 0
     }]
@@ -154,7 +154,7 @@ function App() {
     }]
 
     const [pokemon, setPokemon] = useState(pokemons[0])
-    const [bulbasalr, setBubasalro] = useState(bulbasalrs[0])
+    const [bulbasaur, setBulbasaur] = useState(bulbasaurs[0])
     const [charmander, setCharmander] = useState(charmanders[0])
     const [squirtle, setSquirtle] = useState(squirtles[0])
     const [jigglypuff, setJigglypuff] = useState(jigglypuffs[0])
@@ -167,7 +167,7 @@ function App() {
     <FlexContainer>
       <PokemonCard name = {pokemon.name} type = {pokemon.type} weight = {pokemon.weight} color = {pokemon.color} image= {pokemon.image} pokemons = {pokemons} setPokemon = {setPokemon}/>
 
-      <PokemonCard name = {bulbasalr.name} type = {bulbasalr.type} weight = {bulbasalr.weight} color = {bulbasalr.color} image = {bulbasalr.image} pokemons = {bulbasalrs} setPokemon = {setBubasalro}/> 
+      <PokemonCard name = {bulbasaur.name} type = {bulbasaur.type} weight = {bulbasaur.weight} color = {bulbasaur.color} image = {bulbasaur.image} pokemons = {bulbasaurs} setPokemon = {setBulbasaur}/> 
 
       <PokemonCard name = {charmander.name} type = {charmander.type} weight = {charmander.weight} color = {charmander.color} image = {charmander.image} pokemons = {charmanders} setPokemon = {setCharmander}/> 
 
