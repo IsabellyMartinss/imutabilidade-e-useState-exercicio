@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Card, PokemonName, PokemonType, EvolveButton} from './styles'
 
-
-
-const PokemonCard = (props) => {
-
+const PokemonCard = ({name, type, weight, color, image, setPokemon, pokemons}) => {
+    const [contador, setContador] = useState(0)
+    
     const evoluirPokemon = () => {
-        console.log("Cliquei no botão de evoluir")
-    }
+      if (contador < 5){  
+        setPokemon (pokemons[contador])
+        setContador(contador + 1)     
+    }}
     
   return (
-    <Card color={}>
-        <img src={} alt={`Pokemon`}/>
-        <PokemonName>{}</PokemonName>
-        <PokemonType>{}</PokemonType>
-        <p>{}kg</p>
+    <Card color={color}>
+        <img src={image} alt={`Pokemon`}/>
+        <PokemonName>{name}</PokemonName>
+        <PokemonType>{type}</PokemonType>
+        <p>{weight}kg</p>
 
         <EvolveButton onClick={() => evoluirPokemon()}>Evoluir!</EvolveButton>
     </Card>
